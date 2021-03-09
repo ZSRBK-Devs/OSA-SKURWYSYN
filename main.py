@@ -33,6 +33,9 @@ async def on_message(message):
   if msg.startswith('Osa jak tam?'):
     await message.channel.send('Policja mnie goni!')
 
+  if msg.startswith('Osa kocham cię'):
+    await message.channel.send('Ja was wszystkich kocham')
+
   if msg.startswith('Osa pomocy'):
     await message.channel.send('Zbiór komend')
     await message.channel.send('Osa zdążysz?')
@@ -42,6 +45,7 @@ async def on_message(message):
     await message.channel.send('Osa ile kobiet wyruchałeś?')
     await message.channel.send('Osa w co grasz?')
     await message.channel.send('Osa jak tam?')
+    await message.channel.send('Osa Kocham cię')
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
