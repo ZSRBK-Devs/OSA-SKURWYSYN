@@ -6,6 +6,10 @@ from keep_alive import keep_alive
 client = discord.Client()
 
 @client.event
+async def on_ready():
+    print('Osaa Gotowy')
+
+@client.event
 async def on_message(message):
   if message.author == client.user:
     return
@@ -47,8 +51,8 @@ async def on_message(message):
     await message.channel.send('Osa jak tam?')
     await message.channel.send('Osa Kocham cię')
 
-  if msg.startswith('Osa przestań spamić kurwo'):
-    await message.channel.send('Będę spamił ile chce')
+  if msg.startswith('Ej chłopaki golfa kupiłem'):
+    await message.channel.send('Nikt nie pytał')
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
