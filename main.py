@@ -2,6 +2,7 @@ import discord
 import os
 from discord.ext import commands
 from keep_alive import keep_alive
+import time
 
 client = discord.Client()
 
@@ -52,10 +53,8 @@ async def on_message(message):
     await message.channel.send('Osa Kocham cię')
 
   if msg.startswith('Ej chłopaki golfa kupiłem'):
+    time.sleep(2)
     await message.channel.send('Nikt nie pytał')
-
-  if msg.startswith('Osa przestań spamić kurwo'):
-    await message.channel.send('Będę spamił ile chce')
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
