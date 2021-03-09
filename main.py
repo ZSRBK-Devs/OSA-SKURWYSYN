@@ -54,5 +54,8 @@ async def on_message(message):
   if msg.startswith('Ej chłopaki golfa kupiłem'):
     await message.channel.send('Nikt nie pytał')
 
+  if msg.startswith('Osa przestań spamić kurwo'):
+    await message.channel.send('Będę spamił ile chce')
+
 keep_alive()
 client.run(os.getenv('TOKEN'))
