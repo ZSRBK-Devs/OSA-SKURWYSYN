@@ -2,7 +2,6 @@ import discord
 import os
 from discord.ext import commands
 from keep_alive import keep_alive
-import time
 
 client = discord.Client()
 
@@ -42,19 +41,13 @@ async def on_message(message):
     await message.channel.send('Ja was wszystkich kocham')
 
   if msg.startswith('Osa pomocy'):
-    await message.channel.send('Zbiór komend')
-    await message.channel.send('Osa zdążysz?')
-    await message.channel.send('Osa jak tam giełda?')
-    await message.channel.send('Osa jesteś strasznie zimny')
-    await message.channel.send('Osa tak tak tak')
-    await message.channel.send('Osa ile kobiet wyruchałeś?')
-    await message.channel.send('Osa w co grasz?')
-    await message.channel.send('Osa jak tam?')
-    await message.channel.send('Osa Kocham cię')
+    await message.channel.send('Zbiór komend\n- Osa Kocham cię\n- Osa zdążysz?\n- Osa jak tam giełda?\n- Osa jesteś strasznie zimny\n- Osa tak tak tak\n- Osa ile kobiet wyruchałeś?\n- Osa w co grasz?\n- Osa jak tam?')
 
   if msg.startswith('Ej chłopaki golfa kupiłem'):
-    time.sleep(2)
     await message.channel.send('Nikt nie pytał')
+
+  if msg.startswith('Osa przestań spamić kurwo'):
+    await message.channel.send('Będę spamił ile chce')
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
