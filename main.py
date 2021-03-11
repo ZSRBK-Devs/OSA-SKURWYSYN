@@ -2,6 +2,7 @@ import discord
 import os
 from discord.ext import commands
 from keep_alive import keep_alive
+import random
 
 client = discord.Client()
 
@@ -35,13 +36,18 @@ async def on_message(message):
     await message.channel.send('GTA ONLINE RP to jest PRAWDZIWE życie PRAWDZIWA policja!')
 
   if msg.startswith('Osa jak tam?'):
-    await message.channel.send('Policja mnie goni!')
+    robótka = [
+        "Policja mnie goni!",
+        "Rucham klaudię",
+        "Eksportuję samochody",
+        ]
+    await message.channel.send((random.choice(robótka)))
 
   if msg.startswith('Osa kocham cię'):
     await message.channel.send('Ja was wszystkich kocham')
 
   if msg.startswith('Osa pomocy'):
-    await message.channel.send('Zbiór komend\n- Osa Kocham cię\n- Osa zdążysz?\n- Osa jak tam giełda?\n- Osa jesteś strasznie zimny\n- Osa tak tak tak\n- Osa ile kobiet wyruchałeś?\n- Osa w co grasz?\n- Osa jak tam?')
+    await message.channel.send('Zbiór komend\n- Osa kocham cię\n- Osa zdążysz?\n- Osa jak tam giełda?\n- Osa jesteś strasznie zimny\n- Osa tak tak tak\n- Osa ile kobiet wyruchałeś?\n- Osa w co grasz?\n- Osa jak tam?')
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
